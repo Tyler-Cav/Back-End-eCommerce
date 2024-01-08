@@ -8,6 +8,7 @@ const Category = require('./Category');
 class Product extends Model {}
 
 // set up fields and rules for Product model
+//#UPDATED LINES 12 THROUGH 46
 Product.init(
   {
     id: {
@@ -38,7 +39,7 @@ Product.init(
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: Category,
+        model: 'Category',
         key: 'id'
       }
     }

@@ -4,7 +4,7 @@ const sequelize = require('../config/connection.js');
 
 class Category extends Model {}
 
-//*FIRST ATTEMPT
+//#UPDATED LINES 10 THROUGH 21
 Category.init(
   {
     id: {
