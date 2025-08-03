@@ -64,7 +64,6 @@ router.put('/:id', async (req, res) => {
   res.status(500).json(err)
   }
 });
-//*ISSUE WHERE SYNTAX LOOKS CORRECT BUT ERRORS OUT
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
     try {
@@ -73,9 +72,10 @@ router.delete('/:id', async (req, res) => {
           id: req.params.id
         }
     }) 
-    console.error(error)
+    res.json("success")
   } catch (error) {
-    res.status(500).json("err")
+    res.status(500).json(error.message)
+    console.error(error)
     }
 });
 
